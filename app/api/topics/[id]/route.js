@@ -1,8 +1,10 @@
 
 
 import { NextResponse } from "next/server";
-import connectDB from "../../../../libs/mongoDB";
-import Topic from "../../../../models/topic";
+import connectDB from "../../../libs/mongoDB";
+import Topic from "../../../models/topic";
+
+
 
 
 
@@ -14,7 +16,7 @@ export async function PUT(request, { params }) {
     return NextResponse.json({ message: "Topic updated" }, { status: 200 });
   }
   
-  export async function GET(request, { params }) {
+  export async function GET({ params }) {
     const { id } = params;
     await connectDB();
     const topic = await Topic.findOne({ _id: id });
