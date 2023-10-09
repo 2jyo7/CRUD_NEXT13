@@ -1,6 +1,6 @@
-import Topic from "../../../models/topic";
-import NextResponse from "next/server";
-import connectDB from "../../../libs/mongodb";
+import { NextResponse } from "next/server";
+import connectDB from "../../../../libs/mongoDB";
+import Topic from "../../../../models/topic";
 
 
 

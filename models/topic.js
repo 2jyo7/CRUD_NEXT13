@@ -1,13 +1,13 @@
-import mongoose, {Schema} from "mongoose";
+import mongoose, { Schema } from "mongoose";
 
-const topicSchema = mongoose.Schema(
-    {
+const topicSchema = new Schema(
+  {
     title: String,
     description: String,
-},
-{
-    timeStamps: true,
-}
+  },
+  {
+    timestamps: true,
+  }
 );
 
 const Topic = mongoose.models.Topic || mongoose.model("Topic", topicSchema);
